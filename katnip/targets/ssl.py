@@ -34,7 +34,7 @@ class SslTarget(TcpTarget):
         :param timeout: socket timeout (default: None)
         :param logger: logger for the object (default: None)
         '''
-        super(SslTarget, self).__init__(name, host, port, timeout, logger=None)
+        super(SslTarget, self).__init__(name, host, port, timeout, logger=logger)
 
     def _get_socket(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
